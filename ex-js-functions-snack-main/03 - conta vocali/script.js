@@ -4,13 +4,17 @@ const word = "javascript";
 
 // Dichiara la funzione qui.
 const isVocal = (letter) =>
-  ["A", "B", "C", "D", "E"].includes(letter.toUpperCase());
+  ["A", "E", "I", "O", "U"].includes(letter.toUpperCase());
+
+// const extractVocals = (word) => {
+//   const vocals = [];
+//   for (let i = 0; i < word.length; i++)
+//     if (isVocal(word[i])) vocals.push(word[i]);
+//   return vocals;
+// };
 
 const extractVocals = (word) => {
-  const vocals = [];
-  for (let i = 0; i < word.length; i++)
-    if (isVocal(word[i])) vocals.push(word[i]);
-  return vocals;
+  return word.split("").filter(isVocal);
 };
 
 // Invoca la funzione qui e stampa il risultato in console

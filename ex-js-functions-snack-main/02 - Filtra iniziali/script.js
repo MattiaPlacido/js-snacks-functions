@@ -4,14 +4,20 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 // Dichiara la funzione qui.
 
+// const getInitialsFirstChar = (namesArray, dChar) => {
+//   const filteredNames = [];
+
+//   for (let i = 0; i < namesArray.length; i++)
+//     if (namesArray[i].charAt(0).toUpperCase() === dChar.toUpperCase())
+//       filteredNames.push(namesArray[i]);
+
+//   return filteredNames;
+// };
+
 const getInitialsFirstChar = (namesArray, dChar) => {
-  const filteredNames = [];
-
-  for (let i = 0; i < namesArray.length; i++)
-    if (namesArray[i].charAt(0).toUpperCase() === dChar.toUpperCase())
-      filteredNames.push(namesArray[i]);
-
-  return filteredNames;
+  return namesArray.filter(
+    (name) => name.charAt(0).toUpperCase() === dChar.toUpperCase()
+  );
 };
 
 // Invoca la funzione qui e stampa il risultato in console
