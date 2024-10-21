@@ -5,8 +5,10 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 // Dichiara la funzione qui.
 const getInitials = (namesArray) => {
   const initialsArray = [];
+
   for (let i = 0; i < namesArray.length; i++)
     initialsArray.push(namesArray[i].charAt(0));
+
   return initialsArray;
 };
 
