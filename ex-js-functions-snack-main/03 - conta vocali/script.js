@@ -6,21 +6,26 @@ const word = "javascript";
 const isVocal = (letter) =>
   ["A", "E", "I", "O", "U"].includes(letter.toUpperCase());
 
-// const extractVocals = (word) => {
-//   const vocals = [];
-//   for (let i = 0; i < word.length; i++)
-//     if (isVocal(word[i])) vocals.push(word[i]);
-//   return vocals;
-// };
-
 const extractVocals = (word) => {
-  return word.split("").filter(isVocal);
+  const vocals = [];
+  word.split("").forEach((letter) => {
+    if (isVocal(letter)) {
+      vocals.push(letter);
+    }
+  });
+  return vocals;
 };
+
+// const extractVocals = (word) => {
+//   return word.split("").filter(isVocal);
+// };
 
 // Invoca la funzione qui e stampa il risultato in console
 
 const vocals = extractVocals(word);
 
+const vocalsCount = vocals.length;
+
 //Risultato atteso se si passa 'javascript': 3 (a, a, i)
 
-console.log(vocals);
+console.log(vocalsCount, vocals);
